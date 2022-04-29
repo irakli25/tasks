@@ -4,6 +4,7 @@ const Tasks = ({tasks, onDeleteTask, onToggle}) => {
   const onToggle1 = () => {
     console.log('here');
   }
+
   return (
       <>
         {tasks.map((item) => (
@@ -11,13 +12,16 @@ const Tasks = ({tasks, onDeleteTask, onToggle}) => {
               key={item.id} 
               task={item} 
               deleteTask={onDeleteTask}
-              onDoubleClick ={onToggle1}
               />
         ))}
       </>
     
   )
 }
+
+
+
+
 
 Tasks.propTypes = {}
 
