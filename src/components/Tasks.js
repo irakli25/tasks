@@ -1,10 +1,18 @@
 import React from 'react'
 import Task from './Task'
-const Tasks = ({tasks, onDeleteTask}) => {
+const Tasks = ({tasks, onDeleteTask, onToggle}) => {
+  const onToggle1 = () => {
+    console.log('here');
+  }
   return (
       <>
         {tasks.map((item) => (
-            <Task key={item.id} task={item} deleteTask={onDeleteTask}/>
+            <Task 
+              key={item.id} 
+              task={item} 
+              deleteTask={onDeleteTask}
+              onDoubleClick ={onToggle1}
+              />
         ))}
       </>
     
